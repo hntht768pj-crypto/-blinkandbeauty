@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0d">
+  <title>Blink & Beauty by Kerniya</title>
+  <meta name="description" content="Blink & Beauty by Kerniya — Braids, soft locs, natural hairstyles, wigs, weaves and lash clusters.">
+  <style>
+    :root{
+      --pink:#ed3f91; --pink2:#ff78b7; --black:#08090c; --card:#111217;
+      --white:#fff; --muted:#b9b9c2; --line:rgba(255,255,255,.09);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--black);color:var(--white);line-height:1.5}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,9,12,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;justify-content:center;width:100%;font-weight:800;letter-spacing:.08em}
+    .brand img{width:185px;height:70px;object-fit:contain;display:block}
+    .navlinks{display:flex;gap:25px;font-size:14px;color:#ddd}
+    .navlinks a:hover{color:var(--pink2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;background:var(--pink);color:#fff;padding:13px 21px;border-radius:999px;font-weight:800;border:0;cursor:pointer;transition:.2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .hero{min-height:720px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,rgba(237,63,145,.17),transparent 38%),linear-gradient(180deg,#0b0b10,#08090c)}
+    .hero-logo{width:min(300px,62vw);height:auto;object-fit:contain;margin:0 auto 26px;display:block;filter:drop-shadow(0 12px 28px rgba(237,63,145,.12))}
+    .hero-content{position:relative;z-index:1;padding:80px 0}
+    .eyebrow{color:var(--pink2);font-weight:800;letter-spacing:.22em;text-transform:uppercase;font-size:13px;margin-bottom:18px}
+    h1{font-family:Georgia,serif;font-size:clamp(52px,9vw,100px);letter-spacing:.06em;line-height:.95}
+    .script{font-family:cursive;color:var(--pink2);font-size:clamp(27px,4vw,42px);margin:15px 0 22px}
+    .hero p{max-width:650px;margin:0 auto 30px;color:#ddd;font-size:17px}
+    .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,.22)}
+    section{padding:90px 0}
+    .section-title{text-align:center;margin-bottom:45px}
+    .section-title .eyebrow{margin-bottom:8px}
+    h2{font-family:Georgia,serif;font-size:clamp(34px,5vw,54px)}
+    .sub{color:var(--muted);max-width:620px;margin:12px auto 0}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(145deg,#14151b,#0f1015);border:1px solid var(--line);border-radius:22px;padding:28px;min-height:180px}
+    .card h3{font-family:Georgia,serif;font-size:25px;margin-bottom:10px}
+    .card p{color:var(--muted);font-size:14px;margin-bottom:20px}
+    .price{color:var(--pink2);font-weight:800}
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .photo{aspect-ratio:1/1;border-radius:16px;overflow:hidden;background:#15161b;border:1px solid var(--line);display:grid;place-items:center;color:#888}
+    .photo img{width:100%;height:100%;object-fit:cover}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+    .about-box{background:#101116;border:1px solid var(--line);border-radius:28px;padding:40px}
+    .about p{color:var(--muted);margin-top:15px}
+    .policies{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .policy{padding:22px;border-left:3px solid var(--pink);background:#101116;border-radius:14px}
+    .policy h3{margin-bottom:6px}
+    .policy p{color:var(--muted);font-size:14px}
+    .custom-order{background:#0f1015;border:1px solid rgba(237,63,145,.25);border-radius:30px;padding:45px;max-width:900px;margin:auto}.custom-order-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:13px;font-weight:800;color:#eee}.field input,.field select,.field textarea{width:100%;border:1px solid rgba(255,255,255,.12);background:#08090c;color:#fff;border-radius:13px;padding:13px 14px;font:inherit;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--pink)}.field textarea{min-height:120px;resize:vertical}.form-note{color:var(--muted);font-size:13px;margin:18px 0 22px}.booking{background:linear-gradient(135deg,rgba(237,63,145,.2),rgba(255,255,255,.03));border:1px solid rgba(237,63,145,.28);border-radius:30px;padding:55px;text-align:center}
+    .booking p{color:#ddd;max-width:600px;margin:14px auto 25px}
+    footer{border-top:1px solid var(--line);padding:40px 0;color:#aaa;text-align:center}
+    footer img{width:72px;height:72px;object-fit:cover;border-radius:50%;background:#fff;margin-bottom:12px}
+    .mobile-book{display:none}
+    @media(max-width:800px){
+      .navlinks{display:none}
+      nav .btn{display:none}
+      .services{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .about{grid-template-columns:1fr}
+      .policies{grid-template-columns:1fr}
+      .custom-order{padding:28px 20px}
+      .custom-order-grid{grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+      .brand img{width:150px;height:60px}
+      section{padding:65px 0}
+      .hero{min-height:680px}
+      .mobile-book{display:flex;position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:30;box-shadow:0 10px 30px rgba(237,63,145,.35);white-space:nowrap}
+      body{padding-bottom:65px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#home"><img src="logo-dark.png" alt="Blink & Beauty by Kerniya logo"></a>
+      <div class="navlinks">
+        <a href="#home">Home</a><a href="#services">Services</a><a href="#gallery">Gallery</a>
+        <a href="#about">About</a><a href="#policies">Policies</a><a href="#custom-order">Custom Order</a>
+      </div>
+      <a class="btn" href="#custom-order">CUSTOM ORDER</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <img class="hero-logo" src="logo-dark.png" alt="Blink & Beauty by Kerniya logo">
+  <div class="hero-content container">
+    <div class="eyebrow">Hair • Beauty • Confidence</div>
+    <h1>BLINK & BEAUTY</h1>
+    <div class="script">by Kerniya</div>
+    <p>Braids • Soft Locs • Natural Hairstyles • Wigs • Weaves • Lash Clusters</p>
+    <div class="actions">
+      <a class="btn" href="#custom-order">BOOK / CUSTOM ORDER</a>
+      <a class="btn ghost" href="#gallery">VIEW GALLERY</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-title"><div class="eyebrow">Services</div><h2>Choose Your Look</h2><p class="sub">Add your services, descriptions and prices here.</p></div>
+    <div class="services">
+      <div class="card"><h3>Braids</h3><p>Add your braid styles and details here.</p><div class="price">TT$ —</div></div>
+      <div class="card"><h3>Soft Locs</h3><p>Add your loc styles and details here.</p><div class="price">TT$ —</div></div>
+      <div class="card"><h3>Natural Hairstyles</h3><p>Add your natural-hair services here.</p><div class="price">TT$ —</div></div>
+      <div class="card"><h3>Wigs</h3><p>Add wig installs, styling or customization here.</p><div class="price">TT$ —</div></div>
+      <div class="card"><h3>Weaves</h3><p>Add your weave services and details here.</p><div class="price">TT$ —</div></div>
+      <div class="card"><h3>Lash Clusters</h3><p>Add lash options and details here.</p><div class="price">TT$ —</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-title"><div class="eyebrow">Portfolio</div><h2>Recent Looks</h2><p class="sub">Replace these placeholders with your best client photos.</p></div>
+    <div class="gallery">
+      <div class="photo">ADD PHOTO 01</div><div class="photo">ADD PHOTO 02</div><div class="photo">ADD PHOTO 03</div>
+      <div class="photo">ADD PHOTO 04</div><div class="photo">ADD PHOTO 05</div><div class="photo">ADD PHOTO 06</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about">
+    <div>
+      <div class="eyebrow">About Blink & Beauty</div><h2>Beauty that makes you blink twice.</h2>
+      <p class="sub" style="margin:14px 0 0">Add your own story, location, experience and what makes your services special.</p>
+    </div>
+    <div class="about-box"><h3>Meet Kerniya</h3><p>Add a short bio here. You can include your specialties, experience and what clients can expect when they book.</p></div>
+  </div>
+</section>
+
+<section id="policies">
+  <div class="container">
+    <div class="section-title"><div class="eyebrow">Please Read</div><h2>Booking Policies</h2><p class="sub">Please review the booking requirements before making an appointment.</p></div>
+    <div class="policies">
+      <div class="policy"><h3>Deposit</h3><p>A TT$100 non-refundable deposit is required to secure your appointment.</p></div>
+      <div class="policy"><h3>Location</h3><p>Calder Hall, Tobago.</p></div>
+      <div class="policy"><h3>Appointments</h3><p>By appointment only.</p></div>
+      <div class="policy"><h3>Booking</h3><p><a href="tel:+18687991617" style="color:inherit;font-weight:800">799-1617</a> to book your appointment.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="custom-order">
+  <div class="container">
+    <div class="section-title"><div class="eyebrow">Custom Order</div><h2>Tell Us Your Look</h2><p class="sub">Need something specific? Send the details and continue through WhatsApp.</p></div>
+    <form class="custom-order" id="customOrderForm">
+      <div class="custom-order-grid">
+        <div class="field"><label for="name">Name</label><input id="name" name="name" required placeholder="Your name"></div>
+        <div class="field"><label for="phone">WhatsApp / Phone</label><input id="phone" name="phone" required placeholder="868-xxx-xxxx"></div>
+        <div class="field"><label for="service">Service</label><select id="service" name="service"><option>Braids</option><option>Soft Locs</option><option>Natural Hairstyles</option><option>Wigs</option><option>Weaves</option><option>Lash Clusters</option><option>Other / Custom</option></select></div>
+        <div class="field"><label for="length">Desired Length</label><input id="length" name="length" placeholder="e.g. Waist length"></div>
+        <div class="field"><label for="style">Desired Style</label><input id="style" name="style" required placeholder="Describe the style"></div>
+        <div class="field"><label for="preferences">Color / Preferences</label><input id="preferences" name="preferences" placeholder="Color, size, parting, curls, etc."></div>
+        <div class="field full"><label for="reference">Reference Photo</label><input id="reference" name="reference" type="text" placeholder="Paste a photo link, or send the photo in WhatsApp after submitting"></div>
+        <div class="field full"><label for="notes">Additional Notes</label><textarea id="notes" name="notes" placeholder="Anything else we should know?"></textarea></div>
+      </div>
+      <p class="form-note">A TT$100 non-refundable deposit is required to secure your appointment. By appointment only · Calder Hall, Tobago.</p>
+      <button class="btn" type="submit">SEND CUSTOM ORDER ON WHATSAPP</button>
+    </form>
+  </div>
+</section>
+
+<section id="book">
+  <div class="container">
+    <div class="booking">
+      <div class="eyebrow">Ready?</div><h2>Book Your Appointment</h2>
+      <p>Calder Hall, Tobago · By appointment only.<br><strong>799-1617</strong> to book your appointment.<br>A <strong>TT$100 non-refundable deposit</strong> is required to secure your appointment.</p>
+      <a class="btn" href="https://wa.me/18687991617?text=Hi%20Kerniya%2C%20I%27d%20like%20to%20book%20an%20appointment."
+        target="_blank" rel="noopener">WHATSAPP TO BOOK</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<a class="btn mobile-book" href="#custom-order">CUSTOM ORDER</a>
+
+<footer>
+  <strong>BLINK & BEAUTY</strong> · by Kerniya<br>Calder Hall, Tobago · By appointment only<br><span style="font-size:12px">© 2026 Blink & Beauty. All rights reserved.</span>
+</footer>
+<script>
+document.getElementById('customOrderForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const data = new FormData(this);
+  const msg = [
+    'Hi Kerniya! I would like to place a custom order.',
+    '',
+    'Name: ' + (data.get('name') || ''),
+    'WhatsApp / Phone: ' + (data.get('phone') || ''),
+    'Service: ' + (data.get('service') || ''),
+    'Desired Length: ' + (data.get('length') || 'Not specified'),
+    'Desired Style: ' + (data.get('style') || ''),
+    'Color / Preferences: ' + (data.get('preferences') || 'Not specified'),
+    'Reference Photo: ' + (data.get('reference') || 'I will send the photo in WhatsApp'),
+    'Additional Notes: ' + (data.get('notes') || 'None')
+  ].join('\n');
+  window.open('https://wa.me/18687991617?text=' + encodeURIComponent(msg), '_blank');
+});
+</script>
+</body>
+</html>
